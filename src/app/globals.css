@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* --- Colors --- */
+  --color-navy-950: #060E1F;
+  --color-navy-900: #081028;
+  --color-navy-800: #0A1929;
+  --color-navy-700: #0F2744;
+  --color-navy-600: #163560;
+  --color-navy-500: #1E4976;
+  --color-navy-400: #2A6497;
+
+  --color-purple-primary: #CB3CFF;
+  --color-purple-light: #E080FF;
+  --color-purple-dark: #8B1FB0;
+
+  --color-cyan-accent: #00C2FF;
+  --color-cyan-light: #60D4FF;
+  --color-cyan-dark: #0090CC;
+
+  --color-surface: #111827;
+  --color-surface-light: #1F2937;
+  --color-surface-lighter: #374151;
+  --color-border-surface: #1E293B;
+
+  /* --- Typography --- */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* --- Animations --- */
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glowPulse 3s ease-in-out infinite;
+  --animate-slide-in-left: slideInLeft 0.6s ease-out forwards;
+  --animate-slide-in-right: slideInRight 0.6s ease-out forwards;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes fadeInUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes slideInLeft {
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slideInRight {
+    0% { transform: translateX(50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+}
+
+/* --- Global Resets --- */
+
+:root {
+  --background: #081028;
+  --foreground: #F8FAFC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(203, 60, 255, 0.3);
+  color: #F8FAFC;
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #163560 #081028;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #081028;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #163560;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CB3CFF;
+}
+
+/* --- Custom Utility Classes --- */
+
+/* Gradient text: purple to cyan */
+.gradient-text {
+  background: linear-gradient(135deg, #CB3CFF 0%, #00C2FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card: blur + border with hover glow */
+.glass-card {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(203, 60, 255, 0.3);
+  box-shadow: 0 0 30px rgba(203, 60, 255, 0.08);
+}
+
+/* Dot pattern background */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(203, 60, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Gradient mesh: radial gradients for hero sections */
+.gradient-mesh {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(203, 60, 255, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(0, 194, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(203, 60, 255, 0.06) 0%, transparent 50%);
+}
+
+/* Primary button: purple gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #8B1FB0 0%, #CB3CFF 100%);
+  color: white;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(203, 60, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Glow border */
+.glow-border {
+  border: 1px solid rgba(203, 60, 255, 0.2);
+  box-shadow: 0 0 20px rgba(203, 60, 255, 0.05);
+}
+
+/* --- Animation Delays --- */
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
