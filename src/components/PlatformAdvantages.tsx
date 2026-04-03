@@ -66,7 +66,7 @@ export function PlatformAdvantages() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-purple-primary border border-purple-primary/20 rounded-full bg-purple-950/30 mb-6">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-400 border border-cyan-400/20 rounded-full bg-cyan-400/5 mb-6">
             ADVANTAGES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">

@@ -19,16 +19,16 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient mesh background */}
-      <div className="absolute inset-0 gradient-mesh" />
+      {/* Gradient background */}
+      <div className="absolute inset-0 gradient-bg" />
 
-      {/* Dot pattern overlay */}
-      <div className="absolute inset-0 dot-pattern opacity-40" />
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 grid-pattern opacity-40" />
 
       {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-primary/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-400/5 rounded-full blur-3xl animate-float" />
       <div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-accent/8 rounded-full blur-3xl animate-float"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-400/5 rounded-full blur-3xl animate-float"
         style={{ animationDelay: "3s" }}
       />
 
@@ -36,12 +36,12 @@ export function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         {/* Badge */}
         <div
-          className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-primary/20 bg-purple-950/30 mb-8 transition-all duration-700 ${
+          className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/5 mb-8 transition-all duration-700 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-purple-primary animate-pulse" />
-          <span className="text-xs font-medium tracking-wider text-purple-light">
+          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+          <span className="text-xs font-medium tracking-wider text-cyan-400">
             AI-POWERED PLATFORMS
           </span>
         </div>
@@ -82,7 +82,7 @@ export function HeroSection() {
           </a>
           <a
             href="#capabilities"
-            className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl border border-border-surface hover:border-purple-primary/40 text-slate-300 hover:text-purple-light text-sm font-medium transition-all duration-300"
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl border border-navy-700 hover:border-cyan-400/40 text-slate-300 hover:text-cyan-300 text-sm font-medium transition-all duration-300"
           >
             View Capabilities
           </a>
@@ -97,7 +97,7 @@ export function HeroSection() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="px-4 py-3 rounded-xl border border-border-surface bg-surface/40 backdrop-blur-sm"
+              className="px-4 py-3 rounded-xl border border-navy-700 bg-navy-800/40 backdrop-blur-sm"
             >
               <div className="text-xl md:text-2xl font-bold gradient-text">
                 {stat.value}
@@ -111,7 +111,7 @@ export function HeroSection() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="text-xs text-slate-600">Scroll</span>
-        <ChevronDown className="w-4 h-4 text-cyan-accent/50 animate-bounce" />
+        <ChevronDown className="w-4 h-4 text-cyan-400/50 animate-bounce" />
       </div>
     </section>
   );

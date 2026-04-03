@@ -26,8 +26,8 @@ export function FinalCTA() {
       id="deploy"
       className="relative py-24 md:py-32 bg-navy-950 overflow-hidden"
     >
-      {/* Gradient mesh background */}
-      <div className="absolute inset-0 gradient-mesh opacity-50" />
+      {/* Gradient background */}
+      <div className="absolute inset-0 gradient-bg opacity-50" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div
@@ -37,7 +37,7 @@ export function FinalCTA() {
               : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-purple-primary border border-purple-primary/20 rounded-full bg-purple-primary/10 mb-6">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-400 border border-cyan-400/20 rounded-full bg-cyan-400/10 mb-6">
             GET STARTED
           </span>
 
@@ -67,7 +67,7 @@ export function FinalCTA() {
               href="https://sentinel.ipptt.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 rounded-xl border border-border-surface hover:border-purple-primary/30 text-slate-300 hover:text-purple-light text-sm font-medium transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 rounded-xl border border-navy-700 hover:border-cyan-400/30 text-slate-300 hover:text-cyan-300 text-sm font-medium transition-all duration-300"
             >
               View Documentation
             </a>

@@ -96,12 +96,12 @@ export function DeployedSystems() {
       id="projects"
       className="relative py-24 md:py-32 bg-navy-900"
     >
-      <div className="absolute inset-0 dot-pattern opacity-20" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-accent border border-cyan-accent/20 rounded-full bg-cyan-accent/5 mb-6">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-400 border border-cyan-400/20 rounded-full bg-cyan-400/5 mb-6">
             PROJECTS
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
@@ -143,7 +143,7 @@ export function DeployedSystems() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-semibold text-slate-50 mb-2 group-hover:text-purple-light transition-colors">
+                <h3 className="text-lg font-semibold text-slate-50 mb-2 group-hover:text-cyan-300 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-6">
@@ -156,7 +156,7 @@ export function DeployedSystems() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm font-medium text-purple-primary hover:text-purple-light transition-colors"
+                    className="inline-flex items-center text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     View Project
                     <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

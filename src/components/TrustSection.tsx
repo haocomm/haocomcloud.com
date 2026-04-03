@@ -44,7 +44,7 @@ export function TrustSection() {
               : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-purple-primary border border-purple-primary/20 rounded-full bg-purple-primary/10 mb-6">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-400 border border-cyan-400/20 rounded-full bg-cyan-400/10 mb-6">
             TRUST
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-6">

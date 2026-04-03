@@ -20,14 +20,14 @@ const statusItems = [
 ];
 
 const networkNodes = [
-  { top: "20%", left: "25%", color: "bg-purple-primary", size: 8 },
-  { top: "55%", left: "65%", color: "bg-cyan-accent", size: 8 },
-  { top: "35%", left: "80%", color: "bg-purple-light", size: 8 },
-  { top: "70%", left: "20%", color: "bg-cyan-light", size: 12 },
-  { top: "15%", left: "55%", color: "bg-purple-primary", size: 8 },
-  { top: "80%", left: "70%", color: "bg-cyan-accent", size: 8 },
-  { top: "45%", left: "40%", color: "bg-purple-light", size: 12 },
-  { top: "65%", left: "45%", color: "bg-cyan-accent", size: 8 },
+  { top: "20%", left: "25%", color: "bg-cyan-400", size: 8 },
+  { top: "55%", left: "65%", color: "bg-cyan-400", size: 8 },
+  { top: "35%", left: "80%", color: "bg-cyan-300", size: 8 },
+  { top: "70%", left: "20%", color: "bg-teal-400", size: 12 },
+  { top: "15%", left: "55%", color: "bg-cyan-400", size: 8 },
+  { top: "80%", left: "70%", color: "bg-cyan-400", size: 8 },
+  { top: "45%", left: "40%", color: "bg-cyan-300", size: 12 },
+  { top: "65%", left: "45%", color: "bg-cyan-400", size: 8 },
 ];
 
 function getLevelColor(level: string): string {
@@ -75,12 +75,12 @@ export function DashboardPreview() {
       id="dashboard"
       className="relative py-24 md:py-32 bg-navy-900"
     >
-      <div className="absolute inset-0 dot-pattern opacity-20" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-accent border border-cyan-accent/20 rounded-full bg-cyan-accent/5 mb-6">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-400 border border-cyan-400/20 rounded-full bg-cyan-400/5 mb-6">
             DASHBOARD
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
@@ -94,7 +94,7 @@ export function DashboardPreview() {
 
         {/* Dashboard Container */}
         <div
-          className={`rounded-2xl border border-border-surface bg-surface/60 backdrop-blur-sm overflow-hidden transition-all duration-700 ${
+          className={`rounded-2xl border border-navy-700 bg-navy-900/60 backdrop-blur-sm overflow-hidden transition-all duration-700 ${
             visible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -102,9 +102,9 @@ export function DashboardPreview() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* System Log Panel */}
-            <div className="border-b lg:border-b-0 lg:border-r border-border-surface">
+            <div className="border-b lg:border-b-0 lg:border-r border-navy-700">
               {/* Panel Header */}
-              <div className="flex items-center gap-2 px-6 py-3 border-b border-border-surface bg-navy-800/50">
+              <div className="flex items-center gap-2 px-6 py-3 border-b border-navy-700 bg-navy-800/50">
                 <div className="flex gap-1.5">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
                   <div className="w-2.5 h-2.5 rounded-full bg-amber-400/60" />
@@ -144,8 +144,8 @@ export function DashboardPreview() {
             {/* Right Column */}
             <div className="flex flex-col">
               {/* Network Graph Panel */}
-              <div className="border-b border-border-surface">
-                <div className="flex items-center justify-between px-6 py-3 border-b border-border-surface bg-navy-800/50">
+              <div className="border-b border-navy-700">
+                <div className="flex items-center justify-between px-6 py-3 border-b border-navy-700 bg-navy-800/50">
                   <span className="text-xs text-slate-500 font-mono">
                     network.topology
                   </span>
@@ -167,7 +167,7 @@ export function DashboardPreview() {
                       y1="20%"
                       x2="40%"
                       y2="45%"
-                      stroke="rgba(203,60,255,0.15)"
+                      stroke="rgba(34,211,238,0.15)"
                       strokeWidth="1"
                     />
                     <line
@@ -175,7 +175,7 @@ export function DashboardPreview() {
                       y1="45%"
                       x2="65%"
                       y2="55%"
-                      stroke="rgba(0,194,255,0.15)"
+                      stroke="rgba(45,212,191,0.15)"
                       strokeWidth="1"
                     />
                     <line
@@ -183,7 +183,7 @@ export function DashboardPreview() {
                       y1="15%"
                       x2="40%"
                       y2="45%"
-                      stroke="rgba(203,60,255,0.1)"
+                      stroke="rgba(34,211,238,0.1)"
                       strokeWidth="1"
                     />
                     <line
@@ -191,7 +191,7 @@ export function DashboardPreview() {
                       y1="35%"
                       x2="65%"
                       y2="55%"
-                      stroke="rgba(0,194,255,0.1)"
+                      stroke="rgba(45,212,191,0.1)"
                       strokeWidth="1"
                     />
                     <line
@@ -199,7 +199,7 @@ export function DashboardPreview() {
                       y1="65%"
                       x2="40%"
                       y2="45%"
-                      stroke="rgba(203,60,255,0.1)"
+                      stroke="rgba(34,211,238,0.1)"
                       strokeWidth="1"
                     />
                     <line
@@ -207,7 +207,7 @@ export function DashboardPreview() {
                       y1="80%"
                       x2="65%"
                       y2="55%"
-                      stroke="rgba(0,194,255,0.1)"
+                      stroke="rgba(45,212,191,0.1)"
                       strokeWidth="1"
                     />
                   </svg>
@@ -229,14 +229,14 @@ export function DashboardPreview() {
 
                   {/* Center hub */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-5 h-5 bg-gradient-to-br from-purple-primary to-cyan-accent rounded-full animate-pulse shadow-lg shadow-purple-primary/30" />
+                    <div className="w-5 h-5 bg-gradient-to-br from-cyan-400 to-teal-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/30" />
                   </div>
                 </div>
               </div>
 
               {/* System Status Bar */}
               <div>
-                <div className="px-6 py-3 border-b border-border-surface bg-navy-800/50">
+                <div className="px-6 py-3 border-b border-navy-700 bg-navy-800/50">
                   <span className="text-xs text-slate-500 font-mono">
                     service.status
                   </span>
@@ -245,7 +245,7 @@ export function DashboardPreview() {
                   {statusItems.map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-navy-800/50 border border-border-surface"
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-navy-800/50 border border-navy-700"
                     >
                       <div
                         className={`w-1.5 h-1.5 rounded-full ${getStatusDot(item.status)}`}
@@ -264,7 +264,7 @@ export function DashboardPreview() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="flex items-center justify-between px-6 py-3 bg-navy-800/30 border-t border-border-surface">
+          <div className="flex items-center justify-between px-6 py-3 bg-navy-800/30 border-t border-navy-700">
             <span className="text-xs text-slate-600 font-mono">
               haocomcloud v2.4.1
             </span>

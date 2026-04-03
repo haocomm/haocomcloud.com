@@ -25,7 +25,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy-900/90 backdrop-blur-xl border-b border-border-surface"
+          ? "bg-navy-900/90 backdrop-blur-xl border-b border-navy-700"
           : "bg-transparent"
       }`}
     >
@@ -33,11 +33,11 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-primary to-cyan-accent flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-teal-400 flex items-center justify-center">
               <Cloud className="w-4 h-4 text-white" />
             </div>
             <span className="font-semibold text-base tracking-tight text-slate-50">
-              HAO<span className="text-purple-primary">COMCLOUD</span>
+              HAO<span className="text-cyan-400">COMCLOUD</span>
             </span>
           </a>
 
@@ -47,7 +47,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 text-sm text-slate-400 hover:text-purple-primary transition-colors duration-200"
+                className="px-3 py-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -63,7 +63,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-slate-400 hover:text-purple-primary transition-colors"
+            className="lg:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -78,14 +78,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-navy-900/98 backdrop-blur-xl border-b border-border-surface">
+        <div className="lg:hidden bg-navy-900/98 backdrop-blur-xl border-b border-navy-700">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm text-slate-400 hover:text-purple-primary hover:bg-surface-light/50 rounded-lg transition-colors"
+                className="block px-4 py-3 text-sm text-slate-400 hover:text-cyan-400 hover:bg-navy-800/50 rounded-lg transition-colors"
               >
                 {link.label}
               </a>

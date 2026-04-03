@@ -45,7 +45,7 @@ export function CapabilitiesSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-purple-primary border border-purple-primary/20 rounded-full bg-purple-950/30 mb-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-400 border border-cyan-400/20 rounded-full bg-cyan-400/5 mb-4">
             CAPABILITIES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
@@ -65,10 +65,10 @@ export function CapabilitiesSection() {
             return (
               <div key={cap.title} className="glass-card p-8">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="p-3 rounded-xl bg-purple-950/50 text-purple-primary">
+                  <div className="p-3 rounded-xl bg-cyan-400/10 text-cyan-400">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-xs text-purple-primary/70 px-2.5 py-1 rounded-full bg-purple-950/30 border border-purple-primary/10">
+                  <span className="text-xs text-cyan-400/70 px-2.5 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20">
                     {cap.badge}
                   </span>
                 </div>

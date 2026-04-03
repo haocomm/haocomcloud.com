@@ -24,17 +24,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-950 border-t border-border-surface">
+    <footer className="bg-navy-950 border-t border-navy-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-primary to-cyan-accent flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-teal-400 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">H</span>
               </div>
               <span className="text-base font-semibold tracking-tight text-slate-50">
-                HAO<span className="text-purple-primary">COM</span>CLOUD
+                HAO<span className="text-cyan-400">COM</span>CLOUD
               </span>
             </div>
             <p className="text-sm text-slate-500 leading-relaxed mb-6">
@@ -61,7 +61,7 @@ export function Footer() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-slate-500 hover:text-purple-primary transition-colors"
+                    className="text-sm text-slate-500 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -80,7 +80,7 @@ export function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.url}
-                    className="text-sm text-slate-500 hover:text-purple-primary transition-colors"
+                    className="text-sm text-slate-500 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -99,7 +99,7 @@ export function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.url}
-                    className="text-sm text-slate-500 hover:text-purple-primary transition-colors"
+                    className="text-sm text-slate-500 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -110,7 +110,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border-surface flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-600">
             &copy; {currentYear} Haocomcloud. All rights reserved.
           </p>

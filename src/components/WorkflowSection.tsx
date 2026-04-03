@@ -44,12 +44,12 @@ const steps: WorkflowStep[] = [
 export function WorkflowSection() {
   return (
     <section id="workflow" className="relative py-24 md:py-32 bg-navy-900">
-      <div className="absolute inset-0 dot-pattern opacity-20" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-accent border border-cyan-accent/20 rounded-full bg-cyan-accent/5 mb-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-cyan-400 border border-cyan-400/20 rounded-full bg-cyan-400/5 mb-4">
             HOW IT WORKS
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
@@ -70,7 +70,7 @@ export function WorkflowSection() {
                 {/* Connector line (desktop) */}
                 {i < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-12 left-[calc(100%+1px)] w-[calc(100%-2px)] h-px">
-                    <div className="w-full h-full bg-gradient-to-r from-purple-primary/30 to-purple-primary/5" />
+                    <div className="w-full h-full bg-gradient-to-r from-cyan-400/30 to-cyan-400/5" />
                   </div>
                 )}
 
@@ -81,7 +81,7 @@ export function WorkflowSection() {
                   </div>
 
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-purple-950/50 border border-purple-primary/10 flex items-center justify-center text-purple-primary mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 mb-5">
                     <Icon className="w-6 h-6" />
                   </div>
 
@@ -104,11 +104,11 @@ export function WorkflowSection() {
         <div className="mt-12 flex items-center justify-center gap-3 flex-wrap">
           {steps.map((step, i) => (
             <span key={step.title} className="flex items-center gap-3">
-              <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-purple-950/30 border border-purple-primary/10 text-purple-light">
+              <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300">
                 {step.title}
               </span>
               {i < steps.length - 1 && (
-                <ArrowRight className="w-4 h-4 text-purple-primary/30" />
+                <ArrowRight className="w-4 h-4 text-cyan-400/30" />
               )}
             </span>
           ))}
